@@ -1,6 +1,7 @@
 package com.company.project.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Table(name = "sys_user")
 public class SysUser {
@@ -20,6 +21,17 @@ public class SysUser {
      * 用户密码
      */
     private String password;
+
+    @Transient
+    private List<SysRole> roles;
+
+    public List<SysRole> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<SysRole> roles) {
+        this.roles = roles;
+    }
 
     /**
      * 获取主键

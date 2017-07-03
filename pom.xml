@@ -47,6 +47,16 @@
             <optional>true</optional>
             <scope>true</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <scope>true</scope>
+        </dependency>
 
         <!--常用库依赖-->
         <dependency>
@@ -68,6 +78,12 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
+        </dependency>
+        <!-- httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <!--<version>4.5.3</version>-->
         </dependency>
         <!--MyBatis 及 插件依赖-->
         <dependency>
@@ -130,6 +146,7 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <encoding>UTF-8</encoding>
+                    <fork>true</fork>
                 </configuration>
             </plugin>
         </plugins>
