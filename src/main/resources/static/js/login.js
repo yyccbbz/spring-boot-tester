@@ -15,7 +15,7 @@ $(function () {
         login();
     });
     // 回车事件
-    $('#loginname, #password').keypress(function (event) {
+    $('#username, #password').keypress(function (event) {
         if (13 == event.keyCode) {
             login();
         }
@@ -27,7 +27,7 @@ function login() {
         url: '/loginpost',
         type: 'POST',
         data: {
-            loginname: $('#loginname').val(),
+            username: $('#username').val(),
             password: $('#password').val(),
             rememberMe: $('#rememberMe').is(':checked'),
             backurl: ""
@@ -45,7 +45,7 @@ function login() {
             } else {
                 alert(data.msg);
                 if (0 == data.code) {
-                    $('#loginname').focus();
+                    $('#username').focus();
                 }
                 /*if (10102 == data.code) {
                     $('#password').focus();
